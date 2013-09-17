@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+		android:layout_width="fill_parent"
+		android:layout_height="fill_parent" xmlns:android="http://schemas.android.com/apk/res/android"
+		android:focusableInTouchMode="false">
+	<ListView
+			android:layout_width="fill_parent"
+			android:layout_height="fill_parent"
+			android:id="@+id/lvItems"
+			android:layout_alignParentTop="false" android:layout_centerInParent="true"
+			android:padding="5dp" android:paddingEnd="50dp" android:scrollingCache="false"
+			android:layout_above="@+id/tableLayout"/>
+	<TableLayout
+			android:layout_width="fill_parent"
+			android:layout_height="wrap_content"
+			android:layout_alignParentBottom="true" android:shrinkColumns="0" android:stretchColumns="0"
+			android:focusable="false" android:padding="5dp" android:background="@android:color/background_dark"
+			android:baselineAligned="true" android:id="@+id/tableLayout">
+		<TableRow
+				android:layout_width="fill_parent"
+				android:layout_height="fill_parent">
+			<EditText
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:hint="@string/hint"
+					android:id="@+id/etNewItem"
+					android:lines="1"/>
+			<Button
+					android:layout_width="wrap_content"
+					android:layout_height="wrap_content"
+					android:text="@string/add"
+					android:id="@+id/btnAddItem"
+					android:onClick="addItem"/>
+		</TableRow>
+	</TableLayout>
+</RelativeLayout>
